@@ -1,16 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import './App.css'
+import Header from './components/Header'
+
+import About from './sections/About'
+import Hero from './sections/Hero'
+import Services from './sections/Services'
+import Contact from './sections/Contact'
+import Join from './sections/Join'
+/* import footer from './components/footer' */
+
+
+const App = () => {
+ 
 
   return (
     <>
-      <h1>ict vista</h1>
+    <div >
+    <Header />
+      <Hero />
+      <About />
+      <Services />
+      <Contact />
+      <Join />
+     
+
+    </div>
+    
+     
     </>
-  )
+  );
 }
 
-export default App
+export default App;
