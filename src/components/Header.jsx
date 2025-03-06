@@ -14,7 +14,7 @@ const Header = () => {
 
   
   const content = (
-    <div className="nav lg:hidden block fixed top-0 left-0 w-full h-screen bg-slate-900 transition text-white z-50">
+    <div className="nav lg:hidden block fixed top-0 left-0 w-full h-screen bg-[#027BCE] transition text-white z-50">
       <ul className="text-center text-xl p-20">
         <Link spy={true} smooth={true} to="Hero">
           <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
