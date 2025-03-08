@@ -11,7 +11,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-gray-100 w-full min-h-screen flex flex-col items-center py-10 px-4">
+    <div className=" w-full   flex flex-col items-center py-10 px-4">{/*  min-h-screen */}
       <h1 className="text-3xl font-bold mb-6 text-center">Our Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
         {services.map((service) => (

@@ -46,7 +46,7 @@ const Header = () => {
   );
 
   return (
-    <nav className="bg-[#027BCE]">
+    <nav className="bg-[#4B88A2] ">
       <div className="h-[10vh] flex justify-between z-50 text-white lg:py-5 mx-8 py-4 items-center">
         
         <div className="flex items-center flex-1">
