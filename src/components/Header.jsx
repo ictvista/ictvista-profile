@@ -4,6 +4,7 @@ import LOGO from '../image/ict-logo.png'
 import { Link } from 'react-router-dom';
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from 'react-icons/ci';
+/* import { Link } from "react-scroll"; */
 
 
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
 
   
   const content = (
-    <div className="nav lg:hidden block fixed top-0 left-0 w-full h-screen bg-[#027BCE] transition text-white z-50">
+    <div className="nav lg:hidden block fixed top-0 left-0 w-full h-screen bg-[#07a4f1] transition text-white z-50">
       <ul className="text-center text-xl p-20">
         <Link spy={true} smooth={true} to="Hero">
           <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
@@ -57,19 +58,19 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8 mr-16">
           <ul className="flex gap-8 text-[18px]">
             <Link spy={true} smooth={true} to="Hero">
-              <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Home</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Home</li>
             </Link>
             <Link spy={true} smooth={true} to="About">
-              <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>About</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>About</li>
             </Link>
             <Link spy={true} smooth={true} to="Service">
-              <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Service</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Service</li>
             </Link>
             <Link spy={true} smooth={true} to="Contact">
-              <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Contact Us</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Contact Us</li>
             </Link>
             <Link spy={true} smooth={true} to="Join">
-              <li className='hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Join Us</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Join Us</li>   {/* border-b-2 */}
             </Link>
           </ul>
         </div>

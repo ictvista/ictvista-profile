@@ -5,7 +5,7 @@ import video from '../image/intro/introVideo.mp4';
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[calc(100vh-10vh)] flex items-center justify-center text-center px-6 sm:px-12">
+    <section className="relative w-full h-[calc(100vh-10vh)] flex items-center justify-center text-center px-6 sm:px-12  mb-20">
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <video autoPlay loop muted className="object-cover w-full h-full filter blur-[3px]">

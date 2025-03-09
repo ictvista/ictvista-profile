@@ -45,10 +45,10 @@ ease: "linear",
 
 const Technology = () => {
 return (
-<div className="  w-full py-6 bg-white overflow-hidden">
+<div className="  w-full py-6 bg-white overflow-hidden mt-20 ">
 {/* Title */}
-<div className="text-center text-xl sm:text-2xl font-semibold mb-10 rem  text-gray-800">
-<h2 className="text-3xl font-bold text-center">Technology We Use</h2>
+<div className="text-center text-xl sm:text-2xl font-semibold mb-20 rem  text-gray-800">
+<h2 className="text-3xl font-bold text-center mb-20">Technology We Use</h2>
 </div>
 
 {/* Marquee Wrapper */}
