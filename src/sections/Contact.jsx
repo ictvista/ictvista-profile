@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className=" bg-white min-h-screen flex items-center justify-center p-6">
+    <div id="contact" className=" bg-white min-h-screen flex items-center justify-center  mb-20">
       <div className="max-w-2xl w-full bg-white border-2 border-[#4B88A2] rounded-2xl shadow-xl p-8 md:p-12">
         <h2 className="text-4xl font-bold text-center text-[#001b5e] mb-6">Get in Touch</h2>
         <p className="text-center text-gray-600 mb-8">Fill out the form below, and we'll get back to you soon.</p>
