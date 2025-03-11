@@ -1,7 +1,7 @@
 
 import React from 'react';
-import img1 from "../image/aboutus/about-us.png" 
-import img2 from "../image/aboutus/about-us.png"
+import img2 from "../image/aboutus/girl-pc.jpg" 
+import img1 from "../image/aboutus/team.jpg"
 
 const About = () => {
   return (
@@ -12,12 +12,12 @@ const About = () => {
           <img
             src={img1}
             alt="Team working"
-            className="w-64 md:w-80 rounded-lg shadow-lg relative z-10"
+            className="w-64 h-70 md:w-80 rounded-lg shadow-lg relative z-10"
           />
           <img
             src={img2}
             alt="Team collaboration"
-            className="w-48 md:w-64 rounded-lg shadow-lg absolute -top-10 -left-10"
+            className="w-48 min-h-60 md:w-64 rounded-lg shadow-lg absolute -top-10 -left-10"
           />
         </div>
 

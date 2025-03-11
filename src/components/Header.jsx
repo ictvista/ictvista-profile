@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import LOGO from '../image/ict-logo.png'
+import LOGO from '../image/ict-logofull.png'
 import { Link } from 'react-router-dom';
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from 'react-icons/ci';
@@ -47,30 +47,30 @@ const Header = () => {
   );
 
   return (
-    <nav className="bg-[#4B88A2] ">
+    <nav className="bg-gradient-to-b from-[#1E489D] to-[#0098D9] ">
       <div className="h-[10vh] flex justify-between z-50 text-white lg:py-5 mx-8 py-4 items-center">
         
         <div className="flex items-center flex-1">
-          <img src={LOGO} alt="Logo" className="w-16 h-16 px-2.5 object-contain rounded-full" />
+          <img src={LOGO} alt="Logo" className="w-47 h-47 px-2.5 object-contain rounded-full" />
         </div>
         
         {/* Navigation Links: For larger screens */}
         <div className="hidden lg:flex items-center gap-8 mr-16">
           <ul className="flex gap-8 text-[18px]">
             <Link spy={true} smooth={true} to="Hero">
-              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Home</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer font-bold'>Home</li>
             </Link>
             <Link spy={true} smooth={true} to="About">
-              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>About</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer font-bold'>About</li>
             </Link>
             <Link spy={true} smooth={true} to="Service">
-              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Service</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer  font-bold'>Service</li>
             </Link>
             <Link spy={true} smooth={true} to="Contact">
-              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Contact Us</li>
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer font-bold'>Contact Us</li>
             </Link>
             <Link spy={true} smooth={true} to="Join">
-              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer'>Join Us</li>   {/* border-b-2 */}
+              <li className='hover:text-slate-900 transition  border-slate-900 hover:border-fuchsia-600 cursor-pointer font-bold'>Join Us</li>   {/* border-b-2 */}
             </Link>
           </ul>
         </div>

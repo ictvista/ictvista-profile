@@ -52,7 +52,7 @@ return (
 </div>
 
 {/* Marquee Wrapper */}
-<div className=" relative w-full flex  bg-[#4B88A2] space-y-4 overflow-hidden flex-shrink-0">
+<div className=" relative w-full flex  bg-gradient-to-b from-[#1E489D] to-[#0098D9] space-y-4 overflow-hidden flex-shrink-0">
 {/* Marquee (Both Lines in One Row) */}
 <div className="flex space-x-4">
 {/* First Line */}

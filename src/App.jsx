@@ -59,6 +59,8 @@ import Join from "./sections/Join";
 import Technology from "./sections/Technology";
 import Footer from "./components/Footer";
 import Testimonial from "./sections/Testomonial";
+import CustomSection from "./sections/CustomSection";
+
 
 // Animation Variants
 const fadeInUp = {
@@ -77,17 +79,22 @@ const App = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeInUp}
         >
+          
           <Hero />
         </motion.section>
+      
 
+       
+           
+          <CustomSection /> 
         <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeInUp}
-        >
+        ></motion.section>
           <About />
-        </motion.section>
+        
 
         <motion.section
           initial="hidden"
