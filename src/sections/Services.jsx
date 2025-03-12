@@ -90,12 +90,12 @@ const Services = () => {
 export default Services;
  */
 import React from 'react';
-import webDevImage from '../image/service/webdev.jpg';
-import uiUxImage from '../image/service/webdev.jpg';
-import maintenanceImage from '../image/service/webdev.jpg';
-import marketingImage from '../image/service/webdev.jpg';
-import seoImage from '../image/service/webdev.jpg';
-import contentImage from '../image/service/webdev.jpg';
+import webDevImage from '../image/service/Web.png';
+import uiUxImage from '../image/service/UIUX.png';
+import maintenanceImage from '../image/service/Maintanance.png';
+import marketingImage from '../image/service/marketing.png';
+import seoImage from '../image/service/Seo.png';
+import contentImage from '../image/service/Content.png';
 
 const Services = () => {
   const services = [

@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import video from '../image/intro/introVideo.mp4';
+import video from '../image/intro/introVideo1.mp4';
 
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative w-full h-[calc(100vh-10vh)] flex items-center justify-center text-center px-6 sm:px-12  ">
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <video autoPlay loop muted className="object-cover w-full h-full filter blur-[3px]">
+        <video autoPlay loop muted className="object-cover w-full h-full filter blur-[7.5px]">
           <source src={video} type="video/mp4" />
         </video>
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
@@ -23,7 +23,7 @@ const Hero = () => {
   <span className="text-[#0098D9]">ICT Vista</span>
 </h1>
         <h2 className="text-xl sm:text-3xl font-semibold mb-6 animate__animated animate__fadeIn animate__delay-1s">
-          Innovative Tech for Learnign & Earning
+          Innovative Tech for Learning & Earning
         </h2>
         <p className="text-sm sm:text-lg max-w-2xl mx-auto opacity-90 animate__animated animate__fadeIn animate__delay-2s">
           ICT Vista is a next-generation ICT solutions provider, offering expert services in 
