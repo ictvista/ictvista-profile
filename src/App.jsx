@@ -1,50 +1,4 @@
 /* 
-import './App.css'
-import './index.css'
-import { motion } from "framer-motion";
-import Header from './components/Header'
-import 'animate.css';
-import About from './sections/About'
-import Hero from './sections/Hero'
-import Services from './sections/Services'
-import Contact from './sections/Contact'
-import Join from './sections/Join'
-import Technology from './sections/Technology';
-import Footer from './components/Footer';
-import Testimonial from './sections/Testomonial';
-
-
-
-
-const App = () => {
- 
-
-  return (
-    <>
-    <div >
-    <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Testimonial />
-      <Technology />
-      <Contact />
-      
-      
-      <Join />
-      <Footer />
-
-     
-
-    </div>
-    
-     
-    </>
-  );
-}
-
-export default App;
- */
 
 import "./App.css";
 import "./index.css";
@@ -144,6 +98,68 @@ const App = () => {
         <Footer />
       </div>
     </>
+  );
+};
+
+export default App;
+ */
+/* import "./App.css";
+import "./index.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AppRoutes from "./AppRoutes"; 
+
+const App = () => {
+  return (
+    <Router>
+      <div className="overflow-x-hidden">
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App; */
+
+/* import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AppRoutes from "./routes/AppRoutes";
+
+
+const App = () => {
+  return (
+    <Router>
+      <div className="overflow-x-hidden">
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App; */
+/* import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer"; */
+/* import AppRoutes from "./AppRoutes"; */ // Ensure this file exists
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AppRoutes from "./routes/AppRoutes";
+const App = () => {
+  return (
+    <div className="overflow-x-hidden">
+      <Header />
+      <AppRoutes />
+      <Footer />
+    </div>
   );
 };
 

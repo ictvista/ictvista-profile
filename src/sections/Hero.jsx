@@ -3,6 +3,7 @@
 import React from 'react';
 import video from '../image/intro/introVideo.mp4';
 
+
 const Hero = () => {
   return (
     <section className="relative w-full h-[calc(100vh-10vh)] flex items-center justify-center text-center px-6 sm:px-12  ">
@@ -16,15 +17,7 @@ const Hero = () => {
 
       {/* Text Content */}
       <div className="relative z-10 text-white">
-        {/* <h1 className="text-3xl sm:text-5xl font-bold mb-4 animate__animated animate__fadeIn">
-          Welcome to ICT Vista
-        </h1> */}
-  {/*   <h1 className="text-3xl sm:text-5xl font-bold mb-4 animate__animated animate__fadeIn">
-  Welcome to{" "}
-  <span className="bg-gradient-to-r from-[#1E489D] to-[#0098D9] bg-clip-text text-transparent">
-    ICT Vista
-  </span>
-</h1> */}
+       
 <h1 className="text-3xl sm:text-5xl font-bold mb-4 animate__animated animate__fadeIn">
   Welcome to{" "}
   <span className="text-[#0098D9]">ICT Vista</span>
@@ -38,7 +31,9 @@ const Hero = () => {
           businesses with cutting-edge technology solutions.
         </p>
       </div>
+     
     </section>
+    
   );
 };
 

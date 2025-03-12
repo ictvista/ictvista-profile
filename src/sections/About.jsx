@@ -2,7 +2,8 @@
 import React from 'react';
 import img2 from "../image/aboutus/girl-pc.jpg" 
 import img1 from "../image/aboutus/team.jpg"
-
+import aboutus from '../pages/Aboutus'
+import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <section className="py-16 flex items-center bg-white mt-20 mb-20">
@@ -32,9 +33,14 @@ const About = () => {
           <p className="text-gray-700 mt-2 leading-relaxed">
           With a team of industry experts, we deliver tailored solutions for businesses of all sizes, ensuring seamless digital transformation. Backed by innovation, integrity, and a customer-centric approach, ICT Vista is your trusted partner in navigating the evolving ICT landscape.
           </p>
-          <button className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition duration-300">
+          <Link to="/about">
+        <button className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition duration-300">
+          More Details
+        </button>
+      </Link>
+          {/* <button className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition duration-300">
             More Details
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
