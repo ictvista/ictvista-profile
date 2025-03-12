@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logoFull from "../image/ict-logofull.png";
 const Footer = () => {
   return (
-    <footer className='bg-gray-800 text-gray-300 px-6 md:px-16 lg:px-28 pt-10 pb-6 rounded-t-3xl'>
+    <footer className='bg-gradient-to-b from-[#00509E] to-[#003C73]  text-gray-300 px-6 md:px-16 lg:px-28 pt-10 pb-6 rounded-t-3xl'> {/* bg-gradient-to-b from-[#00509E] to-[#003C73] */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
         <div className='flex flex-col items-center'>
           <img src={logoFull}  alt='ICT Vista Logo' className='w-56 h-16 pt-5 mt-7' />
