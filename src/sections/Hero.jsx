@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative w-full h-[calc(100vh-10vh)] flex items-center justify-center text-center px-6 sm:px-12  ">
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <video autoPlay loop muted className="object-cover w-full h-full filter blur-[7.5px]">
+        <video autoPlay loop muted className="object-cover w-full h-full filter blur-[5.5px]">
           <source src={video} type="video/mp4" />
         </video>
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>

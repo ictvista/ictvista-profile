@@ -9,7 +9,7 @@ import Testimonial from "../sections/Testomonial";
 import About from "../sections/About"; */
 import Home from "../pages/Home";
 import Services from "../pages/Service";
-import Contact from "../sections/Contact";
+import Contact from "../pages/Contact";
 import Career from "../pages/Career"
 import Aboutus from "../pages/Aboutus";
 
