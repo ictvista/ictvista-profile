@@ -1,62 +1,41 @@
-
-/* import React from 'react';
-import webDevImage from '../image/service/Web.png';
+import React, { useEffect, useState, useRef } from 'react';
+import webDevImage from '../image/service/web.png';
 import uiUxImage from '../image/service/UIUX.png';
-
-import TrainingImage from '../image/service/training.svg'
+import TrainingImage from '../image/service/Training2.svg';
 import marketingImage from '../image/service/marketing.png';
 import seoImage from '../image/service/Seo.jpg';
 import contentImage from '../image/service/Content.png';
 
 const Services = () => {
-  const services = [
-    { id: 1, title: 'Professional Training & Skill Development', description: 'Enhance your skills and expertise with our professional training programs designed for career growth and success.', color: 'bg-purple-600', hover: 'hover:bg-purple-700', image: TrainingImage },
-    { id: 2, title: 'Web Development', description: 'Building responsive and dynamic websites tailored to your needs.', color: 'bg-sky-500', hover: 'hover:bg-sky-600', image: webDevImage },
-    { id: 3, title: 'UI/UX Design', description: 'Creating user-friendly and visually appealing designs.', color: 'bg-green-500', hover: 'hover:bg-green-600', image: uiUxImage },
-    { id: 4, title: 'Marketing', description: 'Boosting your brand with strategic digital marketing solutions.', color: 'bg-yellow-500', hover: 'hover:bg-yellow-600', image: marketingImage },
-    { id: 5, title: 'SEO Optimization', description: 'Enhancing your website’s visibility on search engines.', color: 'bg-red-500', hover: 'hover:bg-red-600', image: seoImage },
-    { id: 6, title: 'Content Writing', description: 'Crafting engaging and SEO-friendly content.', color: 'bg-blue-500', hover: 'hover:bg-blue-600', image: contentImage }
-  ];
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState("down");
 
-  return (
-    <div className="w-full flex flex-col items-center py-10 px-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-full max-w-6xl">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className="w-full bg-white rounded-lg transform transition-all duration-300 shadow-md hover:shadow-xl overflow-hidden hover:-translate-y-1"
-          >
-            <img className="w-full h-52 object-cover" src={service.image} alt={service.title} />
-            <div className="p-5">
-              <h2 className="font-bold text-lg mb-2 text-center">{service.title}</h2>
-              <p className="text-sm text-gray-600 text-center">{service.description}</p>
-            </div>
-            <div className="flex justify-center mb-5">
-              <a
-                href="#"
-                className={`text-white ${service.color} px-5 py-2.5 rounded-md transition-colors duration-300 ${service.hover}`}
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.7 }
+    );
 
-export default Services; */
-import React from 'react';
-import webDevImage from '../image/service/Web.png';
-import uiUxImage from '../image/service/UIUX.png';
-import TrainingImage from '../image/service/training.svg';
-import marketingImage from '../image/service/marketing.png';
-import seoImage from '../image/service/Seo.jpg';
-import contentImage from '../image/service/Content.png';
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
-const Services = () => {
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    const handleScroll = () => {
+      setScrollDirection(window.scrollY > lastScrollY ? "down" : "up");
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const services = [
     { id: 1, title: 'Professional Training & Skill Development', description: 'Enhance your skills with our expert-led training programs.', image: TrainingImage },
     { id: 2, title: 'Web Development', description: 'Building responsive and dynamic websites tailored to your needs.', image: webDevImage },
@@ -67,27 +46,48 @@ const Services = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-10 px-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full max-w-6xl">
+    <div ref={sectionRef} className="relative flex flex-row items-start w-full px-6 md:px-10 py-20">
+      
+      {/* Moving Section - Smooth Entry & Exit */}
+      <div 
+        className={`fixed left-50 md:left-30 top-20 flex flex-col items-center transition-transform duration-[2000ms] ease-in-out ${
+          isVisible ? (scrollDirection === "down" ? "translate-y-2 opacity-100" : "translate-y-0 opacity-100") : "translate-y-[-100%] opacity-0"
+        }`}
+      >
+        {/* Top Line */}
+        <div className="w-[2px] h-70 md:h-50 bg-black"></div>
+
+        {/* Rotated Text */}
+      
+        <div 
+  className="text-black text-xl font-bold tracking-wide my-2 flex flex-col items-center transform rotate-270"
+  style={{ lineHeight: "10" }}>
+  <span>What we Serve</span>
+
+</div>
+
+
+        {/* Bottom Line */}
+        <div className="w-[2px] h-70 md:h-50 bg-black"></div>
+      </div>
+
+      {/* Right Side - Services Cards */}
+      <div className="ml-auto w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-2">
         {services.map((service) => (
           <div
             key={service.id}
-            className="relative group w-full h-52 rounded-lg overflow-hidden shadow-lg cursor-pointer"
+            className="relative group w-full h-72 overflow-hidden cursor-pointer bg-cover bg-center bg-no-repeat rounded-lg shadow-md"
+            style={{ backgroundImage: `url(${service.image})` }}
           >
-            <img
-              className="w-full h-full object-cover transform transition duration-300 group-hover:scale-110"
-              src={service.image}
-              alt={service.title}
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white text-lg font-semibold p-4 opacity-100 transition-opacity duration-300 group-hover:opacity-0">
+            <div className="absolute inset-0 bg-[#04064A] opacity-90 transition-transform duration-500 group-hover:scale-105"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-lg font-semibold p-4 transition-opacity duration-500 group-hover:opacity-0">
               {service.title}
             </div>
-            <div className="absolute inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center text-white p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="absolute inset-0 bg-opacity-80 flex flex-col items-center justify-center text-white p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
               <h2 className="text-lg font-bold text-center">{service.title}</h2>
-              <hr className="w-10 my-2 border-white" />
+              <hr className="w-12 my-2 border-white" />
               <p className="text-sm text-center">{service.description}</p>
-              <a href="#" className="mt-2 text-blue-400 flex items-center">Read More →</a>
+              <a href="#" className="mt-3 text-blue-400 flex items-center">Read More →</a>
             </div>
           </div>
         ))}
