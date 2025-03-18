@@ -1,7 +1,7 @@
 
 import React from 'react';
-import img2 from "../image/aboutus/girl-pc.jpg" 
-import img1 from "../image/aboutus/team.jpg"
+import img1 from "../image/aboutus/girl-pc.jpg" 
+import img2 from "../image/aboutus/team.jpg"
 import aboutus from '../pages/Aboutus'
 import { Link } from 'react-router-dom';
 const About = () => {

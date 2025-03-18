@@ -8,11 +8,11 @@ const ContactSection = () => {
       <div className="p-12 md:p-16 xl:p-24 bg-[#35383b] text-amber-50  ">
         {/* Header Section */}
         <div className="lg:w-2/3 text-center mx-auto space-y-4">
-          <h1 className="text-[#fdfffc] bold uppercase tracking-widest dark:text-white font-medium text-2xl md:text-3xl">
+          <h1 className="text-[#fdfffc] bold uppercase tracking-widest dark:text-amber-50 font-medium text-2xl md:text-3xl">
             Get In Touch
           </h1>
           <div className="h-1 bg-red-500 w-16 mx-auto"></div>
-          <p className="text-amber-50 text-sm md:text-base leading-6">
+          <p className="text-gray-300 text-sm md:text-base leading-6">
             Contact us to discuss your software solutions, web development, and IT consultancy needs.
           </p>
         </div>
@@ -23,23 +23,23 @@ const ContactSection = () => {
             <div className="flex items-center space-x-4">
               <FaPhoneAlt className="text-red-500 text-xl" />
               <div>
-                <h2 className="text-base font-bold dark:text-white">Give us a call</h2>
-                <p className="text-amber-50  text-sm font-medium leading-5">+880 1712597666</p>
-                <p className="text-amber-50 text-sm font-medium leading-5">+880 1622663777</p>
+                <h2 className="text-base font-bold italic  text-gray-300">Give us a call</h2>
+                <p className="text-gray-300 italic   text-sm font-medium leading-5">+880 1712597666</p>
+                <p className="text-gray-300 italic  text-sm font-medium leading-5">+880 1622663777</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-red-500 text-xl" />
               <div>
-                <h2 className="text-base font-bold dark:text-white">Send us an email</h2>
-                <p className="text-amber-50 text-sm font-medium leading-5">info@ictvista.com</p>
+                <h2 className="text-base italic  font-bold text-gray-300">Send us an email</h2>
+                <p className="text-gray-300 italic  text-sm font-medium leading-5">info@ictvista.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-red-500 text-xl" />
               <div>
-                <h2 className="text-base font-bold dark:text-white">Location</h2>
-                <p className="text-amber-50 text-sm font-medium leading-5">2nd Floor, 27/A Sangsad Ave, Dhaka 1215, Bangladesh</p>
+                <h2 className="text-base italic  font-bold dark:text-gray-300">Location</h2>
+                <p className="text-gray-300 italic  text-sm font-medium leading-5">2nd Floor, 27/A Sangsad Ave, Dhaka 1215, Bangladesh</p>
               </div>
             </div>
           </div>

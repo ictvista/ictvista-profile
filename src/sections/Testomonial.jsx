@@ -1,11 +1,17 @@
 import React from 'react';
 import Slider from 'react-slick';
-import img1 from '../image/testomonial/test-img6.jpg';
+/* import img1 from '../image/testomonial/test-img1.jpg';
 import img2 from '../image/testomonial/test-img2.jpg';
 import img3 from '../image/testomonial/test-img4.jpg';
 import img4 from '../image/testomonial/test-img1.jpg';
 import img5 from '../image/testomonial/test-img5.jpg';
-import img6 from '../image/testomonial/test-img3.jpg';
+import img6 from '../image/testomonial/test-img3.jpg'; */
+import img1 from '../image/testomonial/test-img4 .jpg'
+import img2 from '../image/testomonial/test-img1.jpg'
+import img3 from '../image/testomonial/test-img5.jpg'
+import img4 from '../image/testomonial/test-img3.jpg'
+import img5 from '../image/testomonial/test-img7.jpg'
+import img6 from '../image/testomonial/test.jpeg'
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 
