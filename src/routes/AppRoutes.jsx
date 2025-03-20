@@ -12,6 +12,12 @@ import Services from "../pages/Service";
 import Contact from "../pages/Contact";
 import Career from "../pages/Career"
 import Aboutus from "../pages/Aboutus";
+import ProfessionalTraining from "../pages/Service/ProfessionalTraining";
+import Webdev from "../pages/Service/WebDevelopment";
+import UIux from "../pages/Service/DesignUi";
+import Marketing from "../pages/Service/Marketing";
+import Seo from "../pages/Service/Seo";
+
 
 
 const AppRoutes = () => {
@@ -19,7 +25,15 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<Aboutus />} />
-      <Route path="/services" element={<Services />} />
+      <Route path="/ProfessionalTraining" element={<ProfessionalTraining />} />
+      <Route path="/Webdevelopment" element={<Webdev />} />
+      <Route path="/Uiux" element={<UIux />} />
+      <Route path="/marketing" element={<Marketing />} />
+      <Route path="/seo" element={<Seo/>}/>
+      
+      
+  
+     
       <Route path="/contact" element={<Contact />} />
       <Route path="/join" element={<Career />} />
      {/*  <Route path="/technology" element={<Technology />} /> */}

@@ -342,7 +342,7 @@ const App = () => {
 export default App;
  */
 import React, { Suspense, lazy } from "react";
-import "./App.css";
+import './index.css'
 
 const Header = lazy(() => import("./components/Header"));
 const Footer = lazy(() => import("./components/Footer"));

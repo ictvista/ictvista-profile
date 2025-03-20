@@ -79,7 +79,7 @@ const Services = () => {
             className="relative group w-full h-72 overflow-hidden cursor-pointer bg-cover bg-center bg-no-repeat rounded-lg shadow-md"
             style={{ backgroundImage: `url(${service.image})` }}
           >
-            <div className="absolute inset-0 bg-[#04064A] opacity-90 transition-transform duration-500 group-hover:scale-105"></div>
+            <div className="absolute inset-0 bg-[#031426] opacity-85 transition-transform duration-500 group-hover:scale-105"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-lg font-semibold p-4 transition-opacity duration-500 group-hover:opacity-0">
               {service.title}
             </div>
