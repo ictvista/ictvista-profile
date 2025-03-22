@@ -1,6 +1,5 @@
-
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import LOGO from "../image/ict-logofull.png";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
@@ -9,6 +8,8 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 const Header = () => {
   const [click, setClick] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const location = useLocation(); // Get current route
 
   const handleClick = () => setClick(!click);
   const toggleServiceMenu = () => setServiceOpen(!serviceOpen);
@@ -16,6 +17,29 @@ const Header = () => {
     setClick(false);
     setServiceOpen(false);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setServiceOpen(false);
+      }
+    };
+
+    if (serviceOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [serviceOpen]);
+
+  // Close dropdown on page navigation
+  useEffect(() => {
+    setServiceOpen(false);
+    setClick(false);
+  }, [location.pathname]);
 
   return (
     <nav className="bg-gradient-to-b from-[#1E489D] to-[#0098D9] relative z-50">
@@ -36,18 +60,24 @@ const Header = () => {
           <ul className="flex gap-8 text-[18px]">
             <li><Link to="/" className="hover:text-slate-900 transition font-bold">Home</Link></li>
             <li><Link to="/about" className="hover:text-slate-900 transition font-bold">About</Link></li>
-            <li className="relative">
+            <li className="relative" ref={dropdownRef}>
               <button onClick={toggleServiceMenu} className="flex items-center font-bold hover:text-slate-900 transition">
                 Services {serviceOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
               </button>
               {serviceOpen && (
                 <ul className="absolute left-0 mt-2 bg-white text-black shadow-lg rounded w-48 z-50">
-                   <li><Link to="/ProfessionalTraining" className="block px-4 py-2 hover:bg-gray-200">Professional Training</Link></li>
-                  <li><Link to="/Webdevelopment" className="block px-4 py-2 hover:bg-gray-200">Web Development</Link></li>
-                  <li><Link to="/Uiux" className="block px-4 py-2 hover:bg-gray-200">UI/UX</Link></li>
-                  <li><Link to="/marketing" className="block px-4 py-2 hover:bg-gray-200">Marketing</Link></li>
-                  <li><Link to="/seo" className="block px-4 py-2 hover:bg-gray-200">SEO</Link></li>
-                 
+                  {[
+                    { path: "/ProfessionalTraining", label: "Professional Training" },
+                    { path: "/Webdevelopment", label: "Web Development" },
+                    { path: "/Uiux", label: "UI/UX" },
+                    { path: "/marketing", label: "Marketing" },
+                    { path: "/seo", label: "SEO" },
+                    { path: "/content", label: "Content Writing" },
+                  ].map(({ path, label }) => (
+                    <li key={path}>
+                      <Link to={path} className="block px-4 py-2 hover:bg-gray-200" onClick={closeMenu}>{label}</Link>
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>
@@ -75,12 +105,18 @@ const Header = () => {
               </button>
               {serviceOpen && (
                 <ul className="bg-white text-black shadow-lg rounded text-center w-full">
-                 <li><Link to="/ProfessionalTraining" className="block px-6 py-3 hover:bg-gray-200" onClick={closeMenu}>Professional Training</Link></li>
-                  <li><Link to="/Webdevelopment" className="block px-6 py-3 hover:bg-gray-200" onClick={closeMenu}>Web Development</Link></li>
-                  <li><Link to="/Uiux" className="block px-6 py-3 hover:bg-gray-200" onClick={closeMenu}>UI/UX</Link></li>
-                  <li><Link to="/marketing" className="block px-6 py-3 hover:bg-gray-200" onClick={closeMenu}>Marketing</Link></li>
-                  <li><Link to="/seo" className="block px-6 py-3 hover:bg-gray-200" onClick={closeMenu}>SEO</Link></li>
-                  
+                  {[
+                    { path: "/ProfessionalTraining", label: "Professional Training" },
+                    { path: "/Webdevelopment", label: "Web Development" },
+                    { path: "/Uiux", label: "UI/UX" },
+                    { path: "/marketing", label: "Marketing" },
+                    { path: "/seo", label: "SEO" },
+                    { path: "/content", label: "Content Writing" },
+                  ].map(({ path, label }) => (
+                    <li key={path}>
+                      <Link to={path} className="block px-6 py-3 hover:bg-gray-200" onClick={closeMenu}>{label}</Link>
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>

@@ -123,9 +123,9 @@ const Testimonial = () => {
         <div className="md:w-2/3 mt-10 md:mt-0">
           <Slider {...settings} className="max-w-2xl mx-auto">
             {TestimonialsData.map((item) => (
-              <div key={item.id} className="h-[400px] w-full md:w-[600px] flex flex-col justify-between text-center p-8 bg-green-50 shadow-lg rounded-xl mx-auto">
+              <div key={item.id} className="h-[400px] w-full md:w-[600px] flex flex-col justify-between text-center p-8 bg-[#FFFF] shadow-lg rounded-xl mx-auto">
                 <div className="text-blue-500 text-5xl font-bold">“</div>
-                <p className="text-lg text-gray-700 leading-relaxed mb-7">{item.text}</p>
+                <p className="text-lg text-[#3A64CF] leading-relaxed mb-7">{item.text}</p>
                 <div className="flex flex-col items-center">
                   <img src={item.img} alt={item.name} className="w-25 h-25 rounded-full  border-blue-400 shadow-md" />
                   <p className="text-xl font-semibold text-blue-600 mt-2">{item.name}</p>

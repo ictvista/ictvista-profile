@@ -1,12 +1,13 @@
 
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Contact from "../sections/Contact";
 
 const ContactSection = () => {
   return (
-    <section className="py-16 w-full h-full bg-[#35383b] text-amber-50 px-6 md:px-12 xl:px-20">
+   /*  <section className="py-16 w-full h-full bg-[#35383b] text-amber-50 px-6 md:px-12 xl:px-20">
       <div className="p-12 md:p-16 xl:p-24 bg-[#35383b] text-amber-50  ">
-        {/* Header Section */}
+   
         <div className="lg:w-2/3 text-center mx-auto space-y-4">
           <h1 className="text-[#fdfffc] bold uppercase tracking-widest dark:text-amber-50 font-medium text-2xl md:text-3xl">
             Get In Touch
@@ -16,9 +17,9 @@ const ContactSection = () => {
             Contact us to discuss your software solutions, web development, and IT consultancy needs.
           </p>
         </div>
-        {/* Contact Details & Form */}
+ 
         <div className="grid grid-cols-1 bg-[#35383b] lg:grid-cols-3 gap-10 mt-12">
-          {/* Contact Info Section */}
+    
           <div className="space-y-6 mt-12" >
             <div className="flex items-center space-x-4">
               <FaPhoneAlt className="text-red-500 text-xl" />
@@ -43,7 +44,7 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          {/* Contact Form */}
+     
           <div className="lg:col-span-2 ">
             <form className="space-y-6 bg-[#35383b] p-8 rounded-lg  text-amber-50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -89,8 +90,17 @@ const ContactSection = () => {
                 </button>
               </div>
             </form>
+
           </div>
         </div>
+      </div>
+      <Contact />
+    </section> */
+    <section>
+      <div className="bg-[#ECF5FD]">
+     {/*  bg-[#ECF5FD] */}
+     <Contact />
+
       </div>
     </section>
   );
